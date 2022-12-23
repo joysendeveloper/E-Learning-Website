@@ -1,0 +1,42 @@
+.menuBar {
+    list-style: none;
+    position: relative;
+}
+
+/* .cateHover {
+    background-color: red;
+} */
+
+.subcats {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    display: none;
+}
+
+.cateHover:hover .subcats {
+    display: block;
+}
+
+.menuBar li,
+.subcats li {
+    padding: 5px 0px;
+}
+
+/* .menuBar li:hover,
+.subcats li:hover {
+    background: #3331;
+} */
+
+.subcats li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.subcats li a:hover {
+    color: #1465d9;
+}
