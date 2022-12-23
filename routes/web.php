@@ -27,6 +27,8 @@ Route::get('/about', function () {
 Route::get("/course", [CourseController::class, "userCourse"]);
 // show course details 
 Route::get("/course/{id}", [CourseController::class, "courseDetails"]);
+Route::get("/lessons", [lessonController::class, "showInUserIndex"]);
+
 Route::get("/contact", function () {
     return view("contact");
 });

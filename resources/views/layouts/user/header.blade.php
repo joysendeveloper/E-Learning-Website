@@ -51,6 +51,7 @@
                             <a href="http://127.0.0.1:8000/feature" class="dropdown-item">Our Features</a>
                             <a href="http://127.0.0.1:8000/team" class="dropdown-item">Instructors</a>
                             <a href="http://127.0.0.1:8000/testimonial" class="dropdown-item">Testimonial</a>
+                            <a href="http://127.0.0.1:8000/lessons" class="dropdown-item">Video Content</a>
                         </div>
                     </div>
                     <a href="http://127.0.0.1:8000/contact" class="nav-item nav-link">Contact</a>

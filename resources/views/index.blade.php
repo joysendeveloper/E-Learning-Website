@@ -81,9 +81,6 @@
         </nav>
     </div>
     <!-- Navbar End -->
-    <pre>
-    {{$subcats}}
-    </pre>
 
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">

@@ -125,4 +125,10 @@ class LessonController extends Controller
         // return redirect('instructor/addlesson/' . $req->course_id);
         return redirect()->back()->with('success', 'Lesson Added Successfully');
     }
+
+    // Lessons For User 
+    public function showInUserIndex()
+    {
+        return view('lessons');
+    }
 }
