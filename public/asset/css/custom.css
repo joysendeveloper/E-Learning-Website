@@ -48,6 +48,11 @@
     max-height: 30rem;
     /* overflow: hidden; */
 }
+.main-video iframe {
+    height: 30rem;
+    width: 100%;
+    border-radius: 1rem;
+}
 .main-video video {
     border-radius: 1rem;
 }

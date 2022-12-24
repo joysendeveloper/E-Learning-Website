@@ -137,12 +137,12 @@ class CourseController extends Controller
 
     public function getSubCate()
     {
-        $cate_id = $_POST['cate_id'];
+        $cate_id = $_POST['id'];
         $data = Categories::join('Subcategories', 'Categories.id', 'Subcategories.category_id')
             ->where('Categories.id', $cate_id)
             ->get();
-
-        return $data;
+        // $data = "Joy Sen";
+        return response()->json($data);
     }
     // Admin Routes 
 

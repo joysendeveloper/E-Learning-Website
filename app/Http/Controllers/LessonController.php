@@ -131,4 +131,11 @@ class LessonController extends Controller
     {
         return view('lessons');
     }
+
+    //getAPI Data 
+    public function getLessons()
+    {
+        $lessons = Lesson::get();
+        return response()->json($lessons);
+    }
 }

@@ -5,6 +5,7 @@
 <!-- container-scroller -->
 
 <!-- plugins:js -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="{{asset('admin_asset/vendors/js/vendor.bundle.base.js')}}"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->

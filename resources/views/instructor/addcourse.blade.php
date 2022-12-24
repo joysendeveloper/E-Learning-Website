@@ -19,7 +19,7 @@
                     <label class="col-sm-3">Select Category</label>
                     <div class="col-sm-9">
                       <select class="form-control" name="category_id" id="selectCate">
-                        <option value="">Select Category</option>
+                        <option value="0">Select Category</option>
                         @foreach($categories as $category)
                         <option value="{{$category->id}}">{{$category->cate_name}}</option>
                         @endforeach
@@ -112,6 +112,7 @@
         </div>
       </div>
     </div>
+    <!-- Show Courses  -->
     <div class="row pt-3 pb-5">
       <div class="col-12">
         <div class="card">
@@ -200,4 +201,34 @@
   </div>
   <!-- partial -->
 </div>
+@endsection
+@section('script')
+<script>
+  // Get Sub Category With Ajax
+  $(document).ready(() => {
+    $('#selectCate').on("change", () => {
+      var cat_id = $('#selectCate').find(":selected").val();
+
+      $.ajax({
+        url: "{{URL::to('instructor/get_sub_cate')}}",
+        type: "POST",
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {
+          id: cat_id
+        },
+        success: function(data) {
+          var subCate = $('#selectSubCate');
+          option = `<option>Select Subcategory</option>`;
+          console.log(data);
+          data.forEach((value) => {
+            option += `<option value="${value.id}">${value.sub_cate_name}</option>`;
+          });
+          subCate.html(option);
+        }
+      });
+    });
+  });
+</script>
 @endsection
